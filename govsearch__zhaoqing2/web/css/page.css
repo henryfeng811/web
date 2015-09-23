@@ -1,0 +1,95 @@
+﻿.list_navigator{
+	height:29px;
+	background:#ffffff;
+	float:right;
+	font-size:10.5pt;
+	padding:2px;
+}
+.nav_page_detail{
+	float:left;
+	padding-top:4px;
+}
+.nav_pagenum,.nav_recordnum,.nav_currpage,.nav_pagesize{
+	color:red;
+	font-size:11pt;
+	margin:0 4px;
+	font-weight:bold;
+}
+.nav_page{
+	color:blue;
+	cursor:pointer;
+	font-size:12pt;
+	margin:0 2px;
+	width:20px;
+	text-align:center;
+	border:1px solid silver;
+}
+.nav_page a:link,.nav_page a:visited{
+	color:blue;
+	text-decoration:none;
+}
+.nav_page a:hover,.nav_page a:active{
+	color:green;
+	text-decoration:none;
+}
+.nav_morepage{
+	cursor:normal;
+	font-size:12pt;
+}
+.nav_currpage{
+	color:red;
+	cursor:normal;
+	font-size:12pt;
+	font-weight:bold;
+	border:1px solid black;
+}
+.nav_go{
+	float:left;
+}
+.nav_go input{
+	border:0;
+	width:20px;
+	border-bottom:1px solid black;
+	text-align:right;
+}
+.nav_go_btn, 
+.nav_go_first, .nav_go_pre, .nav_go_next, .nav_go_last,
+.nav_go_first_disabled, .nav_go_pre_disabled, .nav_go_next_disabled, .nav_go_last_disabled{
+	overflow:hidden;
+	height:16px;
+	width:16px;
+	margin:0 2px;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+.nav_specpage_go{
+	float:left;
+}
+.nav_go_pre{
+	height:16px;
+	width:50px;
+	margin:0 1px;
+	font-size:12px;
+}
+.nav_go_next{
+	height:16px;
+	width:50px;
+	margin:0 1px;
+	font-size:12px;
+}
+.nav_go_pre a:link,.nav_go_pre a:visited,
+.nav_go_next a:link, .nav_go_next a:visited{
+	color:black;
+	text-decoration:none;
+}
+.nav_go_pre a:hover,.nav_go_pre a:active,
+.nav_go_next a:hover, .nav_go_next a:active{
+	color:red;
+	text-decoration:underline;
+}
+.disabled_go a:link,.disabled_go a:visited,
+.disabled_go a:hover,.disabled_go a:active{
+	color:gray;
+	text-decoration:none;
+}
+

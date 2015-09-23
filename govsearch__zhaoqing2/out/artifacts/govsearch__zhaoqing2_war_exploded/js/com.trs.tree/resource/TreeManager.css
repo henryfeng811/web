@@ -1,0 +1,45 @@
+.TreeViewManager{
+	margin:0px;
+	padding:0px;
+	font-size:12px;
+}
+
+.TreeViewManager div{
+	display:inline;
+	float:left;
+	width:14px;
+	height:14px;
+	margin:1px;
+	cursor:pointer;
+}
+
+.TreeView .inputClass{
+	height:18px;  
+	width:80px;
+	border:1px solid black;
+}
+.TreeView .inputClassNormal{
+	height:18px;  
+	width:80px;
+	border:1px solid black;
+	margin-left:20px;
+}
+
+.TreeViewManager .insertAsChild{
+	background:url('operator/insert_as_child.png') center center no-repeat;
+}
+.TreeViewManager .insertAsLastChild{
+	background:url('operator/insert_as_last_child.png') center center no-repeat;
+}
+.TreeViewManager .insert{
+	background:url('operator/insert.png') center center no-repeat;
+}
+.TreeViewManager .insertAsLastSibling{
+	background:url('operator/insert_as_last_sibling.png') center center no-repeat;
+}
+.TreeViewManager .delete{
+	background:url('operator/delete.png') center center no-repeat;
+}
+.TreeViewManager .modify{
+	background:url('operator/modify.png') center center no-repeat;
+}

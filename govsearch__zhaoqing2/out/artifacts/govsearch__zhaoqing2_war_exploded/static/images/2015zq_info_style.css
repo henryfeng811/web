@@ -1,0 +1,169 @@
+@charset "utf-8";
+/* CSS Document */
+/*=主体布局=*/
+.content {
+	padding-top:20px;
+}
+.info-bg {
+	padding-bottom: 6px;
+	background: url(2015zq_home_gdpic_bg02.png) no-repeat left bottom;
+}
+.info-main {
+	background: #fff url(2015zq_home_gdpic_bg01.png) no-repeat;
+	padding:15px 18px 20px 20px;
+}
+/*=焦点图=*/
+.info-pic {
+	padding-top:6px;
+	width:642px;
+	height:338px;
+	position: relative;
+	overflow:hidden;
+	overflow-x:hidden;
+}
+.info-pic li {
+	height:338px;
+	overflow:hidden;
+}
+.info-pic li a {
+	display:inline-block;
+	width:642px;
+	height:338px;
+	position:relative;
+	overflow:hidden;
+}
+.info-pic li a span {
+	display:inline-block;
+	position:absolute;
+	left:0;
+	bottom:0;
+	padding:10px 20px 32px 20px;
+	width:602px;
+	height:30px;
+	font:16px/30px "微软雅黑";
+	color:#fff;
+	background:url(2015zq_info_pic_bg.png);
+	text-align:left;
+}
+.info-pic li a:hover span {
+	text-decoration:underline;
+}
+.info-pic .left, .info-pic .right {
+	display:none;
+}
+.info-pic .number {
+	position:absolute;
+	bottom:12px;
+	right:16px;
+}
+.info-pic .number a {
+	display:block;
+	width:12px;
+	height:12px;
+	background:url(2015zq_info_dot1.png) no-repeat;
+	float:left;
+	margin-left:10px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+.info-pic .number a:hover, .info-pic .number .cur {
+	background:url(2015zq_info_dot2.png) no-repeat;
+}
+.info-tips {
+	width:320px;
+}
+/*=标题info-tit=*/
+.info-tit {
+	height: 37px;
+	background: url(2015zq_comtit01_bg01.png) repeat-x left bottom;
+}
+.info-tit a {
+	display: inline-block;
+	float: left;
+	padding: 0 10px 2px 5px;
+	height: 35px;
+	background: url(2015zq_comtit01_bg02.png) repeat-x left bottom;
+	font: 18px/35px "微软雅黑";
+	color: #288bde;
+}
+.info-tit a:hover {
+	color:#026fcb;
+}
+.info-vedio {
+	margin-top:13px;
+	height:70px;
+}
+.info-vedio a {
+	display:inline-block;
+	padding-left:155px;
+	width:165px;
+	height:70px;
+	background:#59a3e2 url(2015zq_info_vedio_bg.png) no-repeat;
+	font:24px/70px "微软雅黑";
+	color:#fff;
+}
+.info-vedio a:hover {
+	background:#288bde url(2015zq_info_vedio_bg.png) no-repeat;
+}
+.info-box {
+	display:inline-block;
+	float:left;
+	width:314px;
+}
+/*=专题专辑=*/
+.info-topic {
+	margin-top:5px;
+}
+.gd-con {
+	padding:26px 0 0 0;
+	height:72px;
+}
+.gd-con .prev, .gd-con .next {
+	display:inline-block;
+	margin:23px 0;
+	width:13px;
+	height:24px;
+	cursor:pointer;
+}
+.gd-con .prev {
+	float:left;
+	margin-right:25px;
+}
+.gd-con .next {
+	float:right;
+}
+.img-list {
+	display: inline-block;
+	float: left;
+	width:923px;
+	position: relative;
+	overflow: hidden;
+	height:72px;
+}
+.img-list ul {
+	position:absolute;
+	left:0;
+	top:0;
+	width:99999px;
+}
+.img-list li {
+	float:left;
+	width:138px;
+	height:72px;
+	margin-right:16px;
+}
+.img-list li a {
+	display:inline-block;
+	width:136px;
+	height:70px;
+	background:#fff;
+	border:1px solid #d2d2d2;
+	text-align:center;
+	font:16px/70px "微软雅黑";
+	color:#288bde;
+}
+.img-list li a:hover {
+	background:#288bde;
+	border-color:#288bde;
+	color:#fff;
+}

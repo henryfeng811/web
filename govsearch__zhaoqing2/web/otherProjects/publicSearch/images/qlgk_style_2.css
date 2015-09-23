@@ -1,0 +1,520 @@
+@charset "utf-8";
+/**
+ * CSS Document * 
+ * Created by Jessie 2014/11/25.
+ */
+
+/* ==公用样式== */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, a {
+    margin: 0;
+    padding: 0;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+html {
+    width: 100%;
+    text-align: center;
+   /* background: #bbe1f6 url("../images/qlgk_bg_bottom.jpg") no-repeat center bottom;*/
+}
+
+body {
+    /*background: url("../images/qlgk_bg_top.jpg") no-repeat center top;*/
+}
+
+img {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+strong {
+    font-weight: bold;
+}
+
+ul, ol, li, dt, dd {
+    list-style: none;
+}
+
+em {
+    font-style: normal;
+}
+
+table {
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.dis-in-b {
+    display: inline-block;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+/* ==主体== */
+#content {
+    width: 1002px;
+    margin: 0 auto;
+    padding: 174px 0 30px 0;
+    text-align: left;
+}
+
+/* ==导航== */
+.lead-con {
+    background: #f5f5f5;
+    padding: 25px;
+    font: 18px/28px "微软雅黑";
+    color: #333;
+}
+
+/* ==搜索== */
+.search {
+    height: 26px;
+    padding: 10px 10px 10px 60px;
+    background: #4c90de url("../images/qlgk_search_ico.png") no-repeat 20px center;
+}
+
+.search strong {
+    display: inline-block;
+    float: left;
+    margin-right: 50px;
+    font: bold 14px/26px "宋体";
+    color: #fff;
+}
+
+.search label {
+    display: inline-block;
+    float: left;
+    margin: 0 10px;
+    font: 12px/26px "宋体";
+    color: #fff;
+}
+
+.search select {
+    display: inline-block;
+    float: left;
+    width: 132px;
+    height: 26px;
+    background: #fff;
+    border: none;
+    font: 12px/26px "宋体";
+    color: #fff;
+}
+
+.search .sr {
+    display: inline-block;
+    float: left;
+    width: 130px;
+    height: 26px;
+    background: #fff;
+    border: none;
+    padding: 0 5px;
+    font: 12px/26px "宋体";
+    color: #fff;
+}
+
+.search .sr01 {
+    display: inline-block;
+    float: left;
+    width: 150px;
+    height: 26px;
+    background: #fff;
+    border: none;
+    padding: 0 5px;
+    font: 12px/26px "宋体";
+    color: #fff;
+}
+
+.search .btn {
+    display: inline-block;
+    float: left;
+    width: 80px;
+    height: 26px;
+    background: #7ad2ff;
+    border: none;
+    margin-left: 1px;
+    font: bold 14px/26px "宋体";
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.con-main {
+    padding: 10px;
+    background: #fff;
+}
+
+/* ==左边== */
+.left {
+    width: 236px;
+    background: #1fadff;
+}
+
+.left .a-top {
+    display: table-cell;
+    *display: inline;
+    *zoom: 1;
+    *padding-top: 78px;
+    width: 236px;
+    height: 338px;
+    *height: 260px;
+    vertical-align: middle;
+    text-align: center;
+    font: 24px/72px "微软雅黑";
+    color: #fff;
+}
+
+.left .a-top:hover {
+    background: #136899;
+}
+
+.left .li01 {
+    height: 80px;
+    background: #1aa1ff;
+    border-bottom: 1px solid #1389ff;
+    text-align: center;
+}
+
+.left .li02 {
+    height: 80px;
+    background: #1aa1ff;
+    border-top: 1px solid #1fadff;
+    text-align: center;
+}
+
+.left li:hover {
+    background: #10598a;
+}
+
+.left li a {
+    font: 24px/80px "微软雅黑";
+    color: #fff3e2;
+}
+
+/* ==右边== */
+.right {
+    width: 744px;
+}
+
+.right span {
+    display: inline-block;
+    float: left;
+    width: 238px;
+    height: 160px;
+    padding: 10px 0 0 10px;
+}
+
+.right a {
+    display: table-cell;
+    *display: inline;
+    *zoom: 1;
+    *padding-top: 20px;
+    width: 238px;
+    height: 160px;
+    *height: 140px;
+    vertical-align: middle;
+    text-align: center;
+    font: 18px/40px "微软雅黑";
+    color: #fff;
+}
+
+.right .a2 {
+    background: #ffa320;
+}
+
+.right .a2:hover {
+    background: #996213;
+}
+
+.right .a3 {
+    background: #00aaaa;
+}
+
+.right .a3:hover {
+    background: #006666;
+}
+
+.right .a4 {
+    background: #e1b700;
+}
+
+.right .a4:hover {
+    background: #876e00;
+}
+
+.right .a5 {
+    background: #2073ff;
+}
+
+.right .a5:hover {
+    background: #134599;
+}
+
+.right .a6 {
+    background: #f74d4d;
+}
+
+.right .a6:hover {
+    background: #942e2e;
+}
+
+.right .a7 {
+    background: #1c58b8;
+}
+
+.right .a7:hover {
+    background: #11356e;
+}
+
+.right .a8 {
+    background: #91d100;
+}
+
+.right .a8:hover {
+    background: #577d00;
+}
+
+.right .a9 {
+    background: #569ce2;
+}
+
+.right .a9:hover {
+    background: #345e88;
+}
+
+.right .a10 {
+    background: #ff7e23;
+}
+
+.right .a10:hover {
+    background: #994c15;
+}
+
+/* ==友情链接== */
+.link-con {
+    background: #f4f4f4;
+}
+
+.link-tab {
+    height: 44px;
+    background: #86a7ae;
+}
+
+.link-tab li {
+    display: inline-block;
+    float: left;
+    padding: 0 30px;
+    font: 14px/44px "宋体";
+    color: #fff;
+    cursor: pointer;
+}
+
+.link-tab li.cur {
+    background: #1c58b8;
+}
+
+.link-main {
+    padding: 10px;
+}
+
+.link-main td {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.link-main td a {
+    background: url("../images/qlgk_li_ico.png") no-repeat left center;
+    padding-left: 10px;
+    font: 12px/30px "宋体";
+    color: #333;
+}
+
+.link-main td a:hover {
+    color: #f60;
+}
+
+/* ==底部== */
+#footer {
+    border-top: 3px solid #fff;
+    background: #004e72;
+    padding: 15px 0;
+}
+
+#footer .main {
+    width: 1002px;
+    margin: 0 auto;
+}
+
+#footer p {
+    font: 12px/24px "宋体";
+    color: #fff;
+}
+
+/* ==概览== */
+.top-tit {
+    height: 29px;
+    background: #eee;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0 0 0 10px;
+    font: bold 14px/29px "宋体";
+    color: #e34000;
+}
+
+.top-tit a {
+    margin: 0 20px;
+    font: 12px/29px "宋体";
+    color: #333;
+}
+
+.top-tit a:hover {
+    color: #f60;
+}
+
+.gl-tab {
+    height: 40px;
+    background: #f4f4f4;
+}
+
+.gl-tab li {
+    display: inline-block;
+    float: left;
+    width: 109px;
+    font: 14px/40px "宋体";
+    color: #f74d4d;
+    text-align: center;
+    cursor: pointer;
+}
+
+.gl-tab li.cur {
+    background: #1fadff;
+    color: #fff;
+}
+
+.gl-main_2 {
+   /* border: 1px solid #1fadff;*/
+}
+
+.gl-main_2 th {
+    height: 29px;
+    /*background: url("../images/qlgk_gl_th_bg.png") repeat-x left bottom;*/
+    border-bottom: 1px solid #c1dbf4;
+    border-right: 1px solid #d2d2d2;
+    font: bold 12px/29px "宋体";
+    color: #333;
+    text-align: center;
+	background-color:#E8F2FB;
+}
+
+.gl-main_2 td {
+    padding: 10px;
+    border-bottom: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+    font: 12px/24px "宋体";
+    color: #333;
+    text-align: left;
+}
+
+/* ==分页导航== */
+.page {
+    padding: 17px 0;
+    height: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.page a {
+    display: inline-block;
+    padding: 0 4px;
+    margin: 2px;
+    color: #333;
+    text-decoration: none;
+    font: 14px/30px Arial, Helvetica, sans-serif;
+}
+
+.page a:hover {
+    background: #ff0000;
+    color: #fff;
+}
+
+.page span {
+    padding: 0 5px;
+    font: 14px/30px Arial, Helvetica, sans-serif;
+}
+
+.page input.tz {
+    width: 54px;
+    height: 20px;
+    text-align: center;
+    font: bold 14px Arial, Helvetica, sans-serif;
+    color: #333;
+    padding-bottom: 3px;
+    padding: 2px 0 0 0 \9;
+    cursor: pointer;
+}
+
+/* ==单位链接== */
+.unit-link {
+    background: #fff;
+    padding: 20px;
+}
+
+.unit-link h2 {
+    height: 40px;
+    background: #569ce2;
+}
+
+.unit-link h2 strong {
+    display: inline-block;
+    padding: 0 20px;
+    background: #498dde url("../images/qlgk_link_ico01.png") no-repeat left center;
+    font: bold 14px/40px "宋体";
+    color: #fff;
+}
+
+.unit-link .main {
+    border: 1px solid #c1cdd9;
+    padding: 20px;
+}
+
+.unit-link td {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.unit-link td a {
+    background: url("../images/qlgk_li_ico.png") no-repeat left center;
+    padding-left: 10px;
+    font: 12px/30px "宋体";
+    color: #333;
+}
+
+.unit-link td a:hover {
+    color: #f60;
+}
+
+.lct_div{display:none; overflow:scroll;width:730px; height:625px;}

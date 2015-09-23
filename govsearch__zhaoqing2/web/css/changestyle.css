@@ -1,0 +1,53 @@
+.styleContainer{
+	position:absolute;
+	top:4px;
+	right:0px;
+    color:#336699;
+    font-size:12px;
+	z-index:999;
+}
+.styleContainer .btnLeft {
+    float:left;
+	WIDTH: 68px; 
+	HEIGHT: 20px; 
+    line-height:20px;
+    padding-left:9px;
+    cursor:default;
+	BACKGROUND: url(../images/csbg.gif) left center no-repeat;
+}   
+.btnRight{
+    float:left;
+	WIDTH: 17px; 
+	HEIGHT: 20px; 
+    cursor:pointer;
+}
+#btnRightUp {
+	BACKGROUND: url(../images/up.gif) left center no-repeat;
+}
+#btnRightDown{
+	BACKGROUND: url(../images/down.gif) left center no-repeat;
+}
+#styleItems{
+    position:relative;
+    top:-1px;
+    width:85px;
+    clear:both;
+    border:1px solid #C0C0C0;
+    border-top:0px;
+    background:white;
+}
+#styleItems a{
+    width:100%;
+    margin:3px;
+    padding:3px 0px;
+    text-align:center;
+}
+#styleItems a:link, #styleItems a:visited{
+    color:#336699;
+	text-decoration:none;
+}
+#styleItems a:hover, #styleItems a:active{
+    color:white;
+    background:#336699;
+    text-decoration:underline;
+}

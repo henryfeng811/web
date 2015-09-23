@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="govsearch__zhaoqing2:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/govsearch__zhaoqing2_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="govsearch__zhaoqing2/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="govsearch__zhaoqing2" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="trsbean" />
+          <element id="library" level="project" name="TRSGovInfoSearch" />
+          <element id="library" level="project" name="log4j-1.2.8" />
+          <element id="library" level="project" name="jaxen-1.1-beta-6" />
+          <element id="library" level="project" name="dom4j-1.6.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

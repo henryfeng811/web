@@ -1,0 +1,1554 @@
+
+
+
+
+ 
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<HEAD>
+<META http-equiv=content-type content="text/html; charset=utf-8">
+<TITLE>树形结构</TITLE>
+<!-- 引入指定的资源 BEGIN -->
+<SCRIPT LANGUAGE=JavaScript src="../js/com.trs.util/Common.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">$import("com.trs.tree.TreeNav");</SCRIPT>
+<!-- 引入指定的资源 END -->
+</HEAD>
+
+<body bgColor=#FFFFFF>
+
+<ul class=TreeView>
+
+	<div title="工作列表"><a href="workingList.jsp" target="main">工作列表</a></div>
+		<ul>
+
+			<div title="待办咨询"><a href="workingListForRefer.jsp" target="main">待办咨询</a></div>
+
+			<div title="待办信访"><a href="workingListForAppeal.jsp" target="main">待办信访</a></div>
+
+		</ul>
+	
+
+	<div title="咨询管理">咨询管理</div>
+		<ul style="display:none">
+
+			<div title="全站咨询" >全站咨询</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referListForWholeWeb.htm?type=0" target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referListForWholeWeb.htm?type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referListForWholeWeb.htm?type=1" target="main">办结事件</a></div>
+					<div title="所有事件"><a href="referListForWholeWeb.htm?type=4" target="main">所有事件</a></div>
+					<div title="退回事件"><a href="referListForWholeWeb.htm?type=3" target="main">退回事件</a></div>
+					<div title="各部门的处理咨询统计信息列表"><a href="departmentSta.htm" target="main">处理统计</a></div>
+					<div title="各部门的咨询反馈统计信息列表"><a href="satisfySta.htm" target="main">反馈统计</a></div>
+					<div title="热门咨询排行"><a href="top10And20.htm" target="main">热门排行</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区府</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=1&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=1&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=1&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=1&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=1" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=1" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=1" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区安监局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=2&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=2&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=2&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=2&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=2" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=2" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=2" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区残联</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=3&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=3&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=3&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=3&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=3" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=3" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=3" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区市政配套局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=4&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=4&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=4&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=4&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=4" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=4" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=4" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区绿化局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=5&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=5&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=5&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=5&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=5" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=5" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=5" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区住宅局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=6&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=6&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=6&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=6&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=6" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=6" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=6" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区档案局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=7&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=7&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=7&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=7&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=7" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=7" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=7" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区人防办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=8&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=8&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=8&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=8&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=8" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=8" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=8" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区集资办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=9&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=9&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=9&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=9&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=9" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=9" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=9" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区社团局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=10&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=10&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=10&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=10&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=10" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=10" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=10" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区知识产权局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=11&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=11&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=11&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=11&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=11" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=11" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=11" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区粮食局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=12&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=12&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=12&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=12&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=12" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=12" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=12" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区物价局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=13&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=13&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=13&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=13&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=13" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=13" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=13" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区政府接待办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=14&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=14&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=14&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=14&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=14" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=14" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=14" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区政府体改办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=15&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=15&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=15&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=15&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=15" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=15" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=15" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区医保办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=16&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=16&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=16&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=16&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=16" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=16" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=16" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区总工会</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=17&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=17&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=17&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=17&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=17" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=17" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=17" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区纪监委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=18&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=18&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=18&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=18&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=18" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=18" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=18" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区机关党工委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=19&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=19&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=19&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=19&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=19" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=19" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=19" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区老干部局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=20&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=20&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=20&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=20&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=20" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=20" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=20" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区委政法委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=21&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=21&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=21&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=21&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=21" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=21" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=21" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">根组织</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=22&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=22&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=22&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=22&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=22" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=22" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=22" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区委统战部</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=23&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=23&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=23&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=23&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=23" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=23" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=23" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区委宣传部</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=24&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=24&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=24&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=24&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=24" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=24" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=24" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区委组织部</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=25&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=25&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=25&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=25&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=25" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=25" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=25" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区委办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=26&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=26&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=26&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=26&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=26" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=26" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=26" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区人大办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=27&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=27&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=27&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=27&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=27" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=27" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=27" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区政协办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=28&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=28&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=28&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=28&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=28" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=28" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=28" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区动迁办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=29&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=29&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=29&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=29&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=29" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=29" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=29" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区防汛办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=30&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=30&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=30&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=30&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=30" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=30" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=30" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">南京西路街道</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=31&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=31&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=31&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=31&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=31" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=31" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=31" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">石门二路街道</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=32&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=32&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=32&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=32&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=32" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=32" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=32" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区法院</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=33&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=33&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=33&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=33&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=33" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=33" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=33" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区招商办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=34&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=34&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=34&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=34&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=34" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=34" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=34" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区老龄办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=35&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=35&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=35&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=35&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=35" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=35" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=35" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区编办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=36&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=36&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=36&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=36&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=36" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=36" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=36" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区爱卫办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=37&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=37&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=37&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=37&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=37" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=37" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=37" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区市容环卫局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=38&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=38&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=38&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=38&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=38" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=38" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=38" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区外事办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=39&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=39&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=39&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=39&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=39" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=39" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=39" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区旅游局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=40&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=40&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=40&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=40&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=40" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=40" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=40" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区统计局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=41&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=41&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=41&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=41&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=41" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=41" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=41" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区机管局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=42&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=42&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=42&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=42&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=42" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=42" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=42" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区法制办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=43&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=43&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=43&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=43&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=43" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=43" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=43" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">药监静安分局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=44&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=44&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=44&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=44&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=44" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=44" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=44" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区质量技监局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=45&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=45&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=45&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=45&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=45" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=45" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=45" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">工商静安分局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=46&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=46&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=46&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=46&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=46" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=46" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=46" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">税务静安分局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=47&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=47&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=47&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=47&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=47" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=47" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=47" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区政府信访办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=48&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=48&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=48&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=48&type=4" target="main">所有事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=48" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=48" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区政府合作办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=49&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=49&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=49&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=49&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=49" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=49" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=49" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区检察院</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=50&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=50&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=50&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=50&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=50" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=50" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=50" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=51&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=51&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=51&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=51&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=51" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=51" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=51" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">静安有线中心</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=52&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=52&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=52&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=52&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=52" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=52" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=52" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">人大</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=53&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=53&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=53&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=53&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=53" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=53" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=53" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">政协</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=54&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=54&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=54&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=54&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=54" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=54" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=54" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">静安时报</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=55&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=55&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=55&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=55&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=55" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=55" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=55" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区保密局 </div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=56&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=56&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=56&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=56&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=56" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=56" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=56" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区文明办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=57&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=57&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=57&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=57&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=57" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=57" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=57" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区党校</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=58&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=58&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=58&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=58&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=58" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=58" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=58" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区人武部</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=59&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=59&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=59&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=59&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=59" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=59" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=59" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区工商联</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=60&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=60&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=60&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=60&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=60" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=60" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=60" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区妇联</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=61&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=61&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=61&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=61&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=61" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=61" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=61" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">共青团区委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=62&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=62&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=62&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=62&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=62" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=62" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=62" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">江宁路街道</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=63&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=63&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=63&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=63&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=63" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=63" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=63" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区司法局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=64&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=64&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=64&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=64&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=64" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=64" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=64" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">安全静安分局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=65&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=65&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=65&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=65&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=65" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=65" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=65" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区民防办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=66&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=66&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=66&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=66&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=66" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=66" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=66" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区国资委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=67&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=67&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=67&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=67&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=67" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=67" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=67" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区工业局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=68&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=68&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=68&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=68&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=68" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=68" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=68" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区房地局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=69&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=69&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=69&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=69&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=69" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=69" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=69" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区规划局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=70&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=70&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=70&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=70&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=70" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=70" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=70" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区环保局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=71&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=71&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=71&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=71&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=71" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=71" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=71" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区体育局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=72&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=72&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=72&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=72&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=72" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=72" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=72" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区文化局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=73&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=73&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=73&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=73&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=73" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=73" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=73" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区卫生局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=74&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=74&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=74&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=74&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=74" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=74" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=74" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区教育局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=75&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=75&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=75&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=75&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=75" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=75" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=75" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区审计局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=76&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=76&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=76&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=76&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=76" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=76" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=76" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区民政局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=77&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=77&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=77&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=77&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=77" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=77" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=77" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区劳动保障局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=78&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=78&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=78&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=78&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=78" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=78" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=78" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区人事局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=79&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=79&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=79&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=79&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=79" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=79" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=79" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">曹家渡街道</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=80&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=80&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=80&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=80&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=80" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=80" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=80" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">静安寺街道 </div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=81&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=81&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=81&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=81&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=81" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=81" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=81" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区政府</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=82&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=82&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=82&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=82&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=82" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=82" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=82" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区侨办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=83&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=83&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=83&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=83&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=83" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=83" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=83" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区城管大队</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=84&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=84&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=84&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=84&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=84" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=84" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=84" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">城管大队</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=85&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=85&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=85&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=85&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=85" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=85" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=85" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">疑难件处理</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=86&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=86&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=86&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=86&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=86" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=86" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=86" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">公安静安分局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=87&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=87&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=87&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=87&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=87" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=87" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=87" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区信息委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=88&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=88&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=88&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=88&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=88" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=88" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=88" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区人口计生委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=89&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=89&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=89&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=89&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=89" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=89" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=89" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区科委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=90&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=90&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=90&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=90&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=90" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=90" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=90" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区市容市政委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=91&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=91&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=91&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=91&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=91" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=91" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=91" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区建交委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=92&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=92&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=92&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=92&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=92" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=92" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=92" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区外经委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=93&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=93&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=93&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=93&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=93" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=93" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=93" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区经委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=94&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=94&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=94&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=94&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=94" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=94" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=94" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区发改委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=95&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=95&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=95&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=95&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=95" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=95" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=95" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区府办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=96&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=96&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=96&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=96&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=96" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=96" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=96" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区财政局</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=97&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=97&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=97&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=97&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=97" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=97" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=97" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区宗教办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=98&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=98&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=98&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=98&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=98" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=98" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=98" target="main">反馈统计</a></div>
+				</ul>
+			
+
+			<div title="部门咨询">区民族和宗教办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="referList.jsp?departmentId=99&type=0"  target="main">待办事件</a></div>
+					<div title="超时事件"><a href="referList.jsp?departmentId=99&type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="referList.jsp?departmentId=99&type=1" target="main" >办结事件</a></div>
+					<div title="所有事件"><a href="referList.jsp?departmentId=99&type=4" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="referBackList.htm?departmentId=99" target="main">退回事件</a></div>
+
+					<div title="部门的咨询统计信息"><a href="departmentSta.htm?departmentId=99" target="main">处理统计</a></div>
+					<div title="部门满意度统计信息"><a href="satisfySta.htm?departmentId=99" target="main">反馈统计</a></div>
+				</ul>
+			
+
+		</ul>
+	
+
+	<div title="信访管理">信访管理</div>
+		<ul style="display:none">
+
+			<div title="全站信访">全站信访</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="appealListForWholeWeb.htm?type=0" target="main">待办事件</a></div>
+					<div title="超时事件"><a href="appealListForWholeWeb.htm?type=2" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="appealListForWholeWeb.htm?type=1" target="main">办结事件</a></div>
+					<div title="所有事件"><a href="appealListForWholeWeb.htm?type=4" target="main">所有事件</a></div>
+					<div title="各部门的处理信访统计信息列表"><a href="departmentStaForAppeal.htm" target="main">处理统计</a></div>
+				</ul>
+			
+
+			<div title="部门信访">区纪监委</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="appealList.jsp?departmentId=18&type=33" target="main">待办事件</a></div>
+					<div title="超时事件"><a href="appealList.jsp?departmentId=18&type=16" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="appealList.jsp?departmentId=18&type=6" target="main">办结事件</a></div>
+					<div title="所有事件"><a href="appealList.jsp?departmentId=18&type=-1" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="appealBackList.htm?departmentId=18" target="main">退回事件</a></div>
+
+					<div title="部门的信访统计信息"><a href="departmentStaForAppeal.htm?departmentId=18" target="main">处理统计</a></div>
+				</ul>
+			
+
+			<div title="部门信访">区人大办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="appealList.jsp?departmentId=27&type=33" target="main">待办事件</a></div>
+					<div title="超时事件"><a href="appealList.jsp?departmentId=27&type=16" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="appealList.jsp?departmentId=27&type=6" target="main">办结事件</a></div>
+					<div title="所有事件"><a href="appealList.jsp?departmentId=27&type=-1" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="appealBackList.htm?departmentId=27" target="main">退回事件</a></div>
+
+					<div title="部门的信访统计信息"><a href="departmentStaForAppeal.htm?departmentId=27" target="main">处理统计</a></div>
+				</ul>
+			
+
+			<div title="部门信访">区政协办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="appealList.jsp?departmentId=28&type=33" target="main">待办事件</a></div>
+					<div title="超时事件"><a href="appealList.jsp?departmentId=28&type=16" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="appealList.jsp?departmentId=28&type=6" target="main">办结事件</a></div>
+					<div title="所有事件"><a href="appealList.jsp?departmentId=28&type=-1" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="appealBackList.htm?departmentId=28" target="main">退回事件</a></div>
+
+					<div title="部门的信访统计信息"><a href="departmentStaForAppeal.htm?departmentId=28" target="main">处理统计</a></div>
+				</ul>
+			
+
+			<div title="部门信访">区法制办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="appealList.jsp?departmentId=43&type=33" target="main">待办事件</a></div>
+					<div title="超时事件"><a href="appealList.jsp?departmentId=43&type=16" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="appealList.jsp?departmentId=43&type=6" target="main">办结事件</a></div>
+					<div title="所有事件"><a href="appealList.jsp?departmentId=43&type=-1" target="main">所有事件</a></div>
+
+					<div title="退回事件"><a href="appealBackList.htm?departmentId=43" target="main">退回事件</a></div>
+
+					<div title="部门的信访统计信息"><a href="departmentStaForAppeal.htm?departmentId=43" target="main">处理统计</a></div>
+				</ul>
+			
+
+			<div title="部门信访">区政府信访办</div>
+				<ul style="display:none">
+					<div title="待办事件"><a href="appealList.jsp?departmentId=48&type=33" target="main">待办事件</a></div>
+					<div title="超时事件"><a href="appealList.jsp?departmentId=48&type=16" target="main">超时事件</a></div>
+					<div title="办结事件"><a href="appealList.jsp?departmentId=48&type=6" target="main">办结事件</a></div>
+					<div title="所有事件"><a href="appealList.jsp?departmentId=48&type=-1" target="main">所有事件</a></div>
+
+					<div title="部门的信访统计信息"><a href="departmentStaForAppeal.htm?departmentId=48" target="main">处理统计</a></div>
+				</ul>
+			
+
+		</ul>
+	
+
+	<div title="系统设置">系统设置</div>
+		<ul style="display:none">
+			<div title="部门维护">部门维护</div>
+				<ul style="display:none">
+					<div title="处理单位"><a href="../management/departmentlist.htm" target="main">处理单位</a></div>
+					<div title="信访部门"><a href="../management/appealdptlist.htm" target="main">信访部门</a></div>
+				</ul>
+			
+			<div title="分类维护">分类维护</div>
+				<ul style="display:none">
+					<div title="一级分类"><a href="../management/categorylist.htm?level=1" target="main">一级分类</a></div>
+					<div title="二级分类"><a href="../management/categorylist.htm?level=2" target="main">二级分类</a></div>
+				</ul>
+			
+			<div title="催办设置">催办设置</div>
+				<ul style="display:none">
+					<div title="咨询催办"><a href="referurge.htm?id=0&type=0" target="main">咨询催办</a></div>
+					<div title="信访催办"><a href="appealurge.htm?id=0&type=0" target="main">信访催办</a></div>
+				</ul>
+			
+			<div title="邮件模板">邮件模板</div>
+				<ul style="display:none">
+					<div title="给咨询人查询号的邮件模板"><a href="mailtemplate.htm?name=1" target="main">发送回执</a></div>
+					<div title="告知咨询人结果的邮件模板"><a href="mailtemplate.htm?name=2" target="main">咨询结果</a></div>
+					<div title="新事件到达通知邮件默板"><a href="mailtemplate.htm?name=3" target="main">新事件通知</a></div>
+					<div title="超时事件的催办邮件模板"><a href="mailtemplate.htm?name=4" target="main">超时催办</a></div>
+				</ul>
+			
+			<div title="事件来源"><a href="eventSourceList.htm" target="main">事件来源</a>
+			<div title="工作日设置"><a href="workday-month.html" target="main">工作日设置</a>
+			<div title="系统参数"><a href="system-config.jsp" target="main">系统参数</a>
+		</ul>
+	
+
+</ul>
+</body>
+</HTML>

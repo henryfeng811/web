@@ -1,0 +1,386 @@
+@charset "utf-8";
+/* CSS Document */
+/*=主体布局=*/
+.content {
+	padding-top:20px;
+}
+.conbg {
+	padding-bottom: 6px;
+	background: url(2015zq_home_gdpic_bg02.png) no-repeat left bottom;
+}
+.conbox {
+	background: #fff url(2015zq_home_gdpic_bg01.png) no-repeat;
+	padding:20px 18px 30px 20px;
+}
+/*=焦点图=*/
+.city-pic {
+	width:722px;
+	height:338px;
+	overflow:hidden;
+	background:#bee1ff;
+}
+#zSlider {
+	height:338px;
+	overflow:hidden;
+	position:relative;
+}
+#picshow {
+	width:629px;
+	height:338px;
+	overflow:hidden;
+	float:left;
+}
+#picshow_img {
+	width:629px;
+	height:295px;
+	overflow:hidden;
+}
+#picshow_img li {
+	width:629px;
+	height:295px;
+	overflow:hidden;
+	float:left;
+	display:none;
+}
+#picshow_img li a {
+	display:inline-block;
+	width:629px;
+	height:295px;
+	position:relative;
+}
+#picshow_img li a img {
+	width:629px;
+	height:295px;
+}
+#picshow_img li a span {
+	position:absolute;
+	left:282px;
+	top:114px;
+	width:60px;
+	height:60px;
+	background:url(2015zq_city_btn1.png) no-repeat;
+}
+#picshow_img li a:hover span {
+	background:url(2015zq_city_btn2.png) no-repeat;
+}
+#picshow_tx {
+	width:629px;
+	height:43px;
+	background:#000;
+	text-align:center;
+	overflow:hidden;
+}
+#picshow_tx li {
+	display:none;
+	text-align:center;
+}
+#picshow_tx li a {
+	font:bold 16px/43px "微软雅黑";
+	color:#fff;
+}
+#picshow_tx li a:hover {
+	text-decoration:underline;
+}
+#select_btn {
+	width:93px;
+	height:338px;
+	display:inline;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+#select_btn li {
+	padding:10px 12px;
+	width:69px;
+	height:47px;
+	border-bottom:1px solid #fff;
+	overflow:hidden;
+	_display:inline-block;
+}
+#select_btn li:hover {
+	background:#288bde;
+}
+#select_btn li.current {
+	background:#288bde;
+}
+#select_btn li a img {
+	width:65px;
+	height:43px;
+	border:2px solid #fff;
+}
+/*=城市概况=*/
+.csgk {
+	width:240px;
+}
+.city-tit {
+	height:32px;
+	background: url(2015zq_comtit01_bg01.png) repeat-x left bottom;
+}
+.city-tit a {
+	display:inline-block;
+	padding: 0 10px 2px 5px;
+	height: 30px;
+	background: url(2015zq_comtit01_bg02.png) repeat-x left bottom;
+	font: 18px/30px "微软雅黑";
+	color: #288bde;
+}
+.city-tit a:hover {
+	color:#026fcb;
+}
+.csgk-box, .gczs-box, .zqmrbox {
+	padding-top:10px;
+}
+.csgk-box p, .gczs-box p, .zqmrbox dd p {
+	text-indent:2em;
+	font:14px/24px "微软雅黑";
+	color:#333;
+}
+.csgk-box p a, .gczs-box p a, .zqmrbox dd p a {
+	font:14px/24px "微软雅黑";
+	color:#e86464;
+}
+.csgk-box p a:hover, .gczs-box p a:hover, .zqmrbox dd p a:hover {
+	color:#288bde;
+}
+/*=时间轴=*/
+.city-axis {
+	margin-top:20px;
+}
+.axis-tit {
+	padding:0 91px;
+	height:58px;
+	background:#f2f2f2 url(2015zq_city_tit01_bg.png) repeat-x left bottom;
+}
+.axis-tit li {
+	display:inline-block;
+	float:left;
+	width:198px;
+	float:left;
+	background:url(2015zq_city_tit01_dot1.png) no-repeat 50% bottom;
+	text-align:center;
+}
+.axis-tit li.active {
+	background:url(2015zq_city_tit01_dot2.png) no-repeat 50% bottom;
+}
+.axis-tit li a {
+	display:inline-block;
+	padding-bottom:18px;
+	height:40px;
+	font:18px/40px "微软雅黑";
+	color:#333;
+}
+.axis-tit li.active a {
+	color:#288bde;
+}
+.city-gczs, .city-jrfc, .city-wlzw, .city-csmp {
+	display:none;
+	padding-top:10px;
+	height:282px;
+	overflow-y:hidden;
+}
+/*=古城追溯=*/
+.mr14 {
+	margin-right:14px;
+}
+.w318 {
+	display:inline-block;
+	float:left;
+	width:318px;
+}
+.zqmrbox dt {
+	display:inline-block;
+	float:left;
+	padding-right:10px;
+	width:94px;
+	height:112px;
+}
+.zqmrbox dt a img {
+	width:94px;
+	height:112px;
+}
+.city-list {
+	padding:10px 0 0 5px;
+}
+.city-list li {
+	padding-left: 14px;
+	height: 24px;
+	background: url(2015zq_base_li_ico1.png) no-repeat left center;
+	overflow: hidden;
+}
+.city-list li a {
+	font: 14px/24px "微软雅黑";
+	color: #333;
+}
+.city-list li a:hover {
+	color:#288bde;
+}
+/*=今日风采=*/
+.jrfc-left {
+	width:724px;
+}
+.jrfc-left .comtit li {
+	margin-right:15px;
+}
+.jrfc-box {
+	display:none;
+	padding-top:10px;
+}
+.jrfc-box .jrfc-map {
+	display:inline-block;
+	float:left;
+	width:160px;
+}
+.jrfc-box .jrfc-map a img {
+	width:160px;
+	height:200px;
+}
+.jrfc-box .jrfc-con {
+	display:inline-block;
+	float:right;
+	width:555px;
+}
+.jrfc-box .jrfc-nr {
+	padding-left:10px;
+}
+.jrfc-box .jrfc-nr p {
+	text-indent:2em;
+	font:12px/24px "微软雅黑";
+	color:#333;
+}
+.jrfc-box .jrfc-qy {
+	padding-top:5px;
+}
+.jrfc-box .jrfc-qy li {
+	display:inline-block;
+	_display:inline;
+	float:left;
+	margin:5px 0 0 10px;
+	width:101px;
+	height:35px;
+	overflow:hidden;
+}
+.jrfc-box .jrfc-qy li a {
+	display:inline-block;
+	width:99px;
+	height:33px;
+	text-align:center;
+	border:1px solid #ccc;
+	font:14px/33px "微软雅黑";
+	color:#333;
+}
+.jrfc-box .jrfc-qy li a:hover {
+	color:#288bde;
+}
+.jrfc-ul {
+	padding-top:46px;
+	width:240px;
+}
+.jrfc-ul li {
+	display:inline-block;
+	float:left;
+	width:120px;
+}
+.jrfc-ul li a {
+	display:inline-block;
+	padding:80px 0 7px 0;
+	width:120px;
+	height:28px;
+	text-align:center;
+	font:14px/28px "微软雅黑";
+}
+.jrfc-ul li.b1 a {
+	background:#288bde url(2015zq_city_brico1.png) no-repeat;
+	color:#fff;
+}
+.jrfc-ul li.b2 a {
+	background:#f5f5f5 url(2015zq_city_brico2.png) no-repeat;
+	color:#288bde;
+}
+.jrfc-ul li.b3 a {
+	background:#f5f5f5 url(2015zq_city_brico3.png) no-repeat;
+	color:#288bde;
+}
+.jrfc-ul li.b4 a {
+	background:#288bde url(2015zq_city_brico4.png) no-repeat;
+	color:#fff;
+}
+/*=未来展望=*/
+.zwpic {
+	padding:0 20px 0 0;
+	width:349px;
+}
+.zwpic img {
+	width:349px;
+	height:203px;
+}
+.city-wlzw dt {
+	height:22px;
+	padding-left:13px;
+	background:url(2015zq_base_li_ico5.png) no-repeat left center;
+	font:14px/22px "微软雅黑";
+	color:#288bde;
+}
+.city-wlzw dd {
+	text-indent:2em;
+	font:14px/24px "微软雅黑";
+	color:#333;
+}
+.city-wlzw dd a {
+	font:14px/24px "微软雅黑";
+	color:#e86464;
+}
+.city-wlzw dd a:hover {
+	color:#288bde;
+}
+/*=城市名片=*/
+.city-csmp {
+	padding-top:16px;
+	height:276px;
+}
+.city-csmp td {
+	background:#288bde;
+	height:137px !important;
+	overflow:hidden;
+}
+.city-csmp td img {
+	display:block;
+	height:137px;
+}
+.city-csmp dl {
+	padding:0 0 0 10px;
+}
+.city-csmp dt {
+	height:36px;
+	font:18px/36px "微软雅黑";
+	color:#fff;
+}
+.city-csmp dd {
+	padding-left:20px;
+}
+.city-csmp dd li {
+	display:inline-block;
+	float:left;
+	width:75px;
+	height:30px;
+	overflow:hidden;
+}
+.city-csmp .ctgy dd {
+	padding-left:10px;
+}
+.city-csmp .ctgy li {
+	float:none;
+	width:100%;
+}
+.city-csmp .view dd {
+	padding-left:46px;
+}
+.city-csmp .view li {
+	width:103px;
+}
+.city-csmp dd li a {
+	font:14px/30px "微软雅黑";
+	color:#00fcff;
+}
+.city-csmp dd li a:hover {
+	color:#fff;
+}

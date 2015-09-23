@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<TITLE> UI组件-树形结构——选择树演示 </TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<SCRIPT language=JavaScript src="../js/com.trs.util/Common.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">$import("com.trs.tree.TreeNav");</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var TreeNav = com.trs.tree.TreeNav;
+//设置树的类型
+//TreeNav.setType(TreeNav.TYPE_RADIO);
+TreeNav.setType(TreeNav.TYPE_CHECKBOX);
+
+//设置记录checkbox Value在LI元素上的属性名称
+TreeNav.setAttrNameRelatedValue("SValue");
+
+//设置默认选中的元素（可以不设置）
+TreeNav.setCheckedValues(["1", "1.1"]);
+
+//设置不能选择的元素（可以不设置）
+//在 UL 或者 LI 上设置 SDisabled=true 属性
+
+//设置Checkbox的名称（可以不设置）
+//在 UL 上设置 SName 属性
+
+//-->
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+<A href="###" onclick="alert(TreeNav.getCheckValues('FirstTree'));return false;">获取ID为FirstTree选中的数据</a><BR>
+
+<ul class=TreeView id="FirstTree">
+	
+  <div title="根节点" SValue="R1"><a href="#" >根节点</a></div>
+    <ul>
+      <div title="我是节点1号"  SValue="1" SDisabled=true><a href="#">节点1</a></div>
+        <ul>
+          <div title="我是节点1.1"  SValue="1.1"><a href="#">节点1.1</a></div>
+          <div title="I'm 节点1.1"  SValue="1.2"><a href="#">节点1.2</a></div>
+			 <div title="I'm 动态载入的节点"  SValue="1.3"><a href="#">动态载入的节点</a></div>
+			 <ul></ul>
+        </ul>
+      
+      <div title="我也是节点2"  SValue="2"><a href="#">节点2</a></div>
+      	<ul>
+          <div title="我们都是节点2.1"  SValue="2.1"><a href="#">节点2.1</a></div>
+          <div title="我讨厌做树叶"  SValue="2.2"><a href="#">节点2.2</a></div>
+          <div title="其实我是一朵花"  SValue="2.3"><a href="#">节点2.3</a></div>
+        </ul>      
+    </ul>  
+</ul>
+
+</BODY>
+</HTML>

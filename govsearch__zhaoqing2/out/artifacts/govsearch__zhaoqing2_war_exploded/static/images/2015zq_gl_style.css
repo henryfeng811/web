@@ -1,0 +1,110 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.h-zqmr {
+	padding-bottom:6px;
+	background:#fff url(2015zq_home_gdpic_bg02.jpg) no-repeat left bottom;
+}
+.top_bk {
+	background:url(2015zq_home_gdpic_bg01.png) no-repeat;
+	padding:20px 38px 15px 38px;
+}
+.search-con .txt2 {
+	background:#fff;
+	border:none;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	outline:none;
+	padding:8px 10px;
+	width:300px;
+	height:20px;
+	font:14px/20px "微软雅黑";
+	color:#333;
+}
+.current,.current a {
+	font:16px/35px "微软雅黑";
+	color:#333;
+}
+.current a:hover,.current strong {
+	color:#288bde;
+	font-weight:normal;
+}
+.top_bk2 {
+	background:url(2015zq_home_gdpic_bg01.png) no-repeat;
+	padding:20px 38px;
+}
+/*右侧栏目*/
+.sidebar-r {
+	display:inline-block;
+	width:240px;
+}
+.sidebar-r h5 {
+	border-bottom:2px solid #ccc;
+	background:url(2015_gl_list.jpg) no-repeat 10px center;
+	font:18px/35px "微软雅黑";
+	color:#3592df;
+	padding-left:25px;
+}
+.sidebar-r .list01 li {
+	display:inline-block;
+	margin-top:15px;
+	overflow-y:hidden;
+}
+.sidebar-r .list01 img {
+	float:left;
+	display:inline-block;
+	margin-right:10px;
+}
+.sidebar-r .list01 p  {
+	display:inline-block;
+	width:120px;
+	float:left;
+	font:14px/24px "微软雅黑";
+	color:#333;
+}
+.sidebar-r .list01 p:hover {
+	color:#288bde;
+}
+.sidebar-r .list01 li {
+	position:relative;
+}
+.sidebar-r .list01 li .bf {
+	display:inline-block;
+	width:108px;
+	height:72px;
+	position:absolute;
+	left:0;
+	top:0;
+	background:url(2015zq_pic_bf.png) no-repeat center center;
+}
+.list02 li {
+	border-bottom:1px solid #e8e8e8;
+}
+.list02 li a {
+	display:inline-block;
+	width:195px;
+	font:16px/36px "微软雅黑";
+	color:#333;
+	height:36px;
+	padding:0 15px 0 30px;
+	background:url(2015zq_gl_meun.png) no-repeat 15px center;
+}
+.list02 li a:hover {
+	color:#fff;
+	background-color:#3592df;
+}
+/*左侧内容开始*/
+.lm {
+	display:inline-block;
+	width:680px;
+}
+.comtit li a {
+	height:37px;
+	display:inline-block;
+	font:18px/37px "微软雅黑";
+	color:#333;
+}
+.comtit li a:hover {
+	background:url(2015zq_comtit01_bg02.png) repeat-x left bottom;
+	color:#288bde;
+}
+

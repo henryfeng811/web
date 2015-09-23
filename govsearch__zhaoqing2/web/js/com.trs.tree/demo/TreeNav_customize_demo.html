@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<TITLE> UI组件-树形结构——自定义树演示 </TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- 引入指定的资源 BEGIN -->
+<SCRIPT language=JavaScript src="../js/com.trs.util/Common.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">$import("com.trs.tree.TreeNav");</SCRIPT>
+<!-- 引入指定的资源 END -->
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//定义每一个不同节点不同的图标(三类节点：Root Folder Page)
+//定义在Li节点上，设置ClassPre
+//大小：
+//-->
+</SCRIPT>
+
+
+<!-- 通过自定义样式控制图标，样式命名规则：.TreeView li.[ClassPre][规则文件名] -->
+<style>
+.TreeView li.MyFolderOpened{
+	background:transparent url(./my_icon/MyFolder.jpg) 12px 2px no-repeat;
+}
+
+
+.TreeView li.MyFolder{
+	background:transparent url(./my_icon/MyFolderOpened.jpg) 12px 2px no-repeat;
+}
+
+.TreeView li.MyPage{
+	text-indent:14px;
+	background:transparent url(./my_icon/MyPage.gif) 12px 2px no-repeat;
+}
+
+.TreeView li.MessagePage{
+	text-indent:14px;
+	background:transparent url(./my_icon/Message.gif) 12px 2px no-repeat;
+}
+
+
+.TreeView li.GmailPage{
+	text-indent:14px;
+	background:transparent url(./my_icon/Gmail.gif) 12px 2px no-repeat;
+}
+
+.TreeView li.GmailPage{
+	text-indent:14px;
+	background:transparent url(./my_icon/Gmail.gif) 12px 2px no-repeat;
+}
+
+
+.TreeView li.TodoPage{
+	text-indent:14px;
+	background:transparent url(./my_icon/listoneday_e.gif) 12px 2px no-repeat;
+}
+
+.TreeView li.SearchPage{
+	text-indent:14px;
+	background:transparent url(./my_icon/search_e.gif) 12px 2px no-repeat;
+}
+
+.TreeView li.StockPage{
+	text-indent:14px;
+	background:transparent url(./my_icon/stock_e.gif) 12px 2px no-repeat;
+}
+
+</style>
+
+</HEAD>
+
+<BODY>
+<!-- 使用UL+class定义树的开始 BEGIN -->
+<ul class=TreeView>
+	
+  <!-- 使用LI定义根节点 BEGIN -->
+  <li title="根节点"><a href="#" >根节点</a>
+    <ul>
+      <li title="我是节点1号" ClassPre="My"><a href="#">节点1</a>
+        <ul>
+          <li title="我是节点1.1" ClassPre="My"><a href="#">节点1.1</a></li>
+          <li title="I'm 节点1.1"><a href="#">节点1.2</a></li>
+			 <li title="I'm 动态载入的节点"><a href="#">动态载入的节点</a><ul></ul></li>
+        </ul>
+      </li>
+      <li title="我也是节点2"><a href="#">节点2</a>
+      	<ul>
+          <li title="我们都是节点2.1"><a href="#">节点2.1</a></li>
+          <li title="我讨厌做树叶"><a href="#">节点2.2</a></li>
+          <li title="其实我是一朵花"><a href="#">节点2.3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <!-- 使用LI定义根节点 END -->
+
+  <li title="自定义图标演示"><a href="#" >自定义图标演示</a>
+    <ul>
+      <li title="Gmail邮箱" ClassPre="Gmail"><a href="#">Gmail邮箱</a></li>
+		<li title="在线消息" ClassPre="Message"><a href="#">在线消息</a></li>
+		<li title="代办事项" ClassPre="Todo"><a href="#">代办事项</a></li>
+		<li title="检索" ClassPre="Search"><a href="#">检索</a></li>
+		<li title="股票" ClassPre="Stock"><a href="#">股票</a></li>		
+        
+    </ul>
+  </li>
+
+</ul>
+<!-- 使用UL+class定义树的开始 END -->
+
+</BODY>
+</HTML>

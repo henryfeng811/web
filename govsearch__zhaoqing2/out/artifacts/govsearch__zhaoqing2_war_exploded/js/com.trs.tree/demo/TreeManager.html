@@ -1,0 +1,140 @@
+<html>
+<HEAD>
+<TITLE> UI组件-树形结构——树维护演示 </TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css">
+    *{
+        margin:0px;
+        padding:0px;
+        font-size:12px;
+    }
+    #TreeView{
+        padding:5px 0px 0px 15px;
+        width:60%;
+        height:100%;
+        overflow:auto;
+        float:left;
+    }
+    .description{
+        float:right;
+        width:40%;
+        height:100%;
+        overflow:auto;
+        border-left:1px solid gray;
+    }
+    .description div{
+        padding:5px;
+    }
+    .keyword{
+        color:green;
+        font-weight:bold;
+    }    
+</style>
+<SCRIPT language=JavaScript src="../../com.trs.util/Common.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+	$import("com.trs.tree.TreeNav");
+	$import("com.trs.tree.TreeManager");
+</SCRIPT>
+<script language="javascript">
+<!--
+//    com.trs.tree.TreeNav.setType(com.trs.tree.TreeNav.TYPE_CHECKBOX);
+//    com.trs.tree.TreeNav.setAttrNameRelatedValue("SValue");
+
+//    Object.extend(com.trs.tree.TreeManager.prototype, {
+//        _initParams : function(){
+//            //重载这个方法，以便设置一些请求的URL等
+//            this.setParams({
+//                identityAttribute : 'objectId',
+//                addURL : 'add.jsp',
+//                deleteURL : 'delete.jsp',
+//                modifyURL : 'modify.jsp'            
+//            });	
+//        },
+//        _validInput : function(oInputElement, sOldValue){
+//            //对输入的树节点名称进行校验,如果校验失败,需要返回false,
+//            //校验成功,需要返回true
+//            //eg.
+//            var msg = '';
+//            if(oInputElement.value.trim() == ''){
+//                msg = "不能为空！";
+//            }else if(oInputElement.value.length > 30){
+//                msg = "长度大于最大长度30！";
+//            }
+//            if(msg){
+//                alert(msg);
+//                oInputElement.value = sOldValue;
+//                oInputElement.focus();
+//                oInputElement.select();
+//                return false;
+//            }
+//            return true;
+//        },
+//        _getSaveParams : function(aElement){
+//            返回在发送添加,修改Ajax请求时,需要向服务器传递的参数
+//            如果不重载这个方法时,则默认返回了
+//            return {
+//                objectId	: objectId,//当前节点的identityAttribute属性,如果没有则为0
+//                parentId	: parentId,//当前节点父节点的identityAttribute属性,如果没有则为0
+//                PreviousId	: PreviousId,//当前节点前一个节点的identityAttribute属性,如果没有则为-1
+//                Name		: name//当前节点的名字
+//            };
+//        },
+//        _getDeleteParams : function(aElement){
+//            返回在发送删除Ajax请求时,需要向服务器传递的参数
+//            如果不重载这个方法时,则默认返回了
+//            return {
+//                objectId	: objectId//当前节点的identityAttribute属性,如果没有则为0
+//            };
+//        },
+//        getRequestResult : function(response, json){
+//            处理服务器返回的结果，如果返回如下格式的json对象，则不需重载这个方法
+//            /*
+//             *期望返回的内容
+//                {
+//                    objectId : '',
+//                    isSuccess : '',
+//                    detailMsg : ''
+//                    //...一些其他信息
+//
+//                };
+//            */
+//            否则在此解析成上面的格式,
+//            //eg.
+//            return {
+//                OBJECTID : com.trs.util.JSON.value(json, "CLASSINFO.CLASSINFOID") || 0,
+//                ISSUCCESS : "true"
+//            };
+//        }
+//    });
+
+//-->
+</script>
+</HEAD>
+
+<BODY>
+<div class="TreeView" id="TreeView">
+	<div><a href="">分类树根</a></div>
+	<ul>
+		<div noOperators="insertAsLastChild,delete"><a href="">分类1</a></div>
+		<div><a href="" onclick="return false;">分类2</a></div>
+		<ul>
+			<div><a href="#">分类21</a></div>
+			<div><a href="#">分类22</a></div>
+		</ul>
+		<div isNoOperator="true"><a href="#">分类3</a></div>
+		<div><a href="">分类4</a></div>
+	</ul>
+</div>
+
+<div class="description">
+    <div>快捷键说明：</div>
+    <div>1.<span class="keyword">Insert</span>创建选中节点的孩子节点；</div>
+    <div>2.<span class="keyword">Enter</span>创建选中节点的兄弟节点；</div>
+    <div>3.<span class="keyword">F2</span>编辑选中的节点；</div>
+    <div>4.<span class="keyword">Delete</span>删除选中的节点；</div>
+    <div>5.<span class="keyword">Esc</span>撤销当前输入状态；</div>
+    <div>6.<span class="keyword">方向键</span>切换选中的节点；</div>
+</div>
+
+</BODY>
+</HTML>

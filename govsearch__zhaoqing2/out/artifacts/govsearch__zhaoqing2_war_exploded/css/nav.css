@@ -1,0 +1,93 @@
+﻿.TreeView ul{
+	margin-left:1px;
+}
+.TreeView div{
+	white-space:nowrap;
+	overflow:hidden;
+	/*override the css of tree*/
+	padding-left:0px;
+	text-indent:0px;
+	line-height:auto;  
+	cursor:default;
+	margin-left:auto;
+	vertical-align:middle;
+}
+.TreeView div.RootOpened{
+	background:transparent url(../images/nav/root_open.gif) 1px center no-repeat;
+	text-indent:32px;
+	line-height:26px; 	
+	margin-top:6px;
+}
+.TreeView div.Root{
+	background:transparent url(../images/nav/root.gif) 1px center no-repeat;
+	text-indent:32px;
+	line-height:26px; 	
+	margin-top:6px;
+}
+
+.TreeView div.FolderOpened{
+	background:transparent url(../images/nav/folder_open.gif) -10px center no-repeat;
+	text-indent:42px;
+	line-height:26px; 
+}
+.TreeView div.Folder{
+	background:transparent url(../images/nav/folder.gif) -10px center no-repeat;
+	text-indent:38px;
+	line-height:26px; 
+}
+.TreeView div.Page{
+	background:transparent url(../images/nav/firstpage.gif) -10px center no-repeat;
+	text-indent:38px;
+	line-height:26px; 
+}
+
+
+
+.TreeView div.FirstFolderOpened{
+	background:transparent url(../images/nav/folder_open.gif) -10px center no-repeat;
+	text-indent:42px;
+	line-height:26px; 
+}
+.TreeView div.FirstFolder{
+	background:transparent url(../images/nav/folder.gif) -10px center no-repeat;
+	text-indent:38px;
+	line-height:26px; 
+}
+.TreeView div.FirstPage{
+	background:transparent url(../images/nav/firstpage.gif) -10px center no-repeat;
+	text-indent:38px;
+	line-height:26px; 
+}
+
+.TreeView div a{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.TreeView A:link,
+.TreeView A:visited{
+	color:black;
+	text-decoration:none;
+	cursor:default;
+	padding:0 center;
+	background-color:transparent;
+}
+.TreeView A:hover,
+.TreeView A:active{
+	color:blue;
+	text-decoration:underline;
+	cursor:default;
+	padding:0 center;
+	background-color:transparent;
+}
+.TreeView A.Selected:link,
+.TreeView A.Selected:visited,
+.TreeView A.Selected:hover,
+.TreeView A.Selected:active{
+	color:red;
+	text-decoration:none;
+	cursor:default;
+	padding:0 center;
+	background-color:transparent;
+}
+

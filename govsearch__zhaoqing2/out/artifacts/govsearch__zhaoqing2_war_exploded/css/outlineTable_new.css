@@ -1,0 +1,16 @@
+.SearchOfInput {
+	color: #666666;
+	font-size: 12px;
+}
+.rowOfSearchNew{
+	margin:10px 0px 10px 0px;
+	background-color: #E1DDDD;
+	height: 22px;
+	vertical-align: middle;
+	padding: 4px 8px 4px 0px;
+}
+.searchTipNew{
+	font-weight:bold;
+	color:#5F5F5F;
+	padding:4px 8px;
+}  

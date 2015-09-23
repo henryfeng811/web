@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="trsbean">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../lib/trsbean.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

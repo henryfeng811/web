@@ -1,0 +1,78 @@
+.TreeView,.TreeView ul{
+  margin:0;
+  padding:0 0 0 10px;
+  list-style:none;
+  font-size:12px;
+}
+.TreeView div{
+  white-space:nowrap;
+  overflow:hidden;
+  padding-left:16px;
+  text-indent:20px;
+  line-height:20px;  
+  cursor:pointer;
+  margin-left:-10px;
+  vertical-align:middle;
+}
+
+.TreeView a:link,
+.TreeView a:visited
+{
+  color:#111111;
+  text-decoration:none;  
+}
+.TreeView a:hover,
+.TreeView a:active
+{
+  color:#0055ff;
+  text-decoration:underline;  
+}
+
+
+.TreeView div.RootOpened{
+	background:transparent url(./root_opened.gif) 1px 2px no-repeat;
+	
+}
+
+
+.TreeView div.Root{
+	background:transparent url(./root.gif) 0px 1px no-repeat;
+	
+}
+
+
+.TreeView div.FolderOpened{
+	background:transparent url(./folder_opened.gif) 1px 1px no-repeat;
+	
+}
+
+
+.TreeView div.Folder{
+	background:transparent url(./folder.gif) 0px 1px no-repeat;
+	
+}
+
+.TreeView div.Page{
+	background:transparent url(./page.gif) 20px 2px no-repeat;
+	
+}
+.TreeView A.Selected:link,
+.TreeView A.Selected:visited,
+.TreeView A.Selected:hover,
+.TreeView A.Selected:active{
+	background-color:#0055fF;
+	color:#FFF;
+	text-decoration:none;
+	cursor:default;
+	padding:0 2px;
+}
+.TreeView A.MouseOver:link,
+.TreeView A.MouseOver:visited,
+.TreeView A.MouseOver:hover,
+.TreeView A.MouseOver:active{
+	background-color:green;
+	color:#FFF;
+	text-decoration:none;
+	cursor:default;
+	padding:0 2px;
+}

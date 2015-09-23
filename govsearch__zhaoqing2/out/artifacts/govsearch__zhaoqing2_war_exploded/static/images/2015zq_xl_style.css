@@ -1,0 +1,416 @@
+﻿@charset "utf-8";
+/* CSS Document */
+#zoomcon {
+	padding:15px;
+	margin-top:15px;
+}
+.Custom_UnionStyle {
+    font:14px/2em "微软雅黑";
+	color:#333;
+}
+.Custom_UnionStyle p{
+    font:14px/2em "微软雅黑";
+	color:#333;
+	margin-bottom:20px;
+}
+.cn_subtit {
+	font:20px/2em "微软雅黑";
+	color:RGB(9,84,139);
+	font-weight: bold;
+}
+
+.concentbj03 {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;  
+    line-height: 28px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    text-align: left;
+    
+}
+.concentbj03 b {
+    color: #666666;
+    float: left;
+    margin-left: 20px;
+}
+
+.fontsize_ctrl span {
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 15px;
+    line-height: 15px;
+    margin-left: 10px;
+    margin-top: 6px;
+    text-align: center;
+    width: 15px;
+}
+
+.colorfont {
+    color: #666666;
+	float:right;
+	width:170px;
+}
+.color01 {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #E6FFFF;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #666666;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #666666;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #666666;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    border-top-color: #666666;
+    border-top-style: solid;
+    border-top-width: 1px;
+    height: 8px;
+    margin-bottom: 8px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 8px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 8px;
+	float:right;
+}
+.color02 {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #CCFFFF;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #666666;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #666666;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #666666;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    border-top-color: #666666;
+    border-top-style: solid;
+    border-top-width: 1px;
+    height: 8px;
+    margin-bottom: 8px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 8px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 8px;
+	float:right;
+}
+.color03 {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #FFFFCC;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #666666;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #666666;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #666666;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    border-top-color: #666666;
+    border-top-style: solid;
+    border-top-width: 1px;
+    height: 8px;
+    margin-bottom: 8px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 8px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 8px;
+	float:right;
+}
+.color04 {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #FFCCFF;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #666666;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #666666;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #666666;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    border-top-color: #666666;
+    border-top-style: solid;
+    border-top-width: 1px;
+    height: 8px;
+    margin-bottom: 8px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 8px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 8px;
+	float:right;
+}
+.color05 {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #99CCFF;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #666666;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #666666;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #666666;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    border-top-color: #666666;
+    border-top-style: solid;
+    border-top-width: 1px;
+    height: 8px;
+    margin-bottom: 8px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 8px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 8px;
+	float:right;
+}
+.color06 {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #EEEEEE;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #666666;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #666666;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #666666;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    border-top-color: #666666;
+    border-top-style: solid;
+    border-top-width: 1px;
+    height: 8px;
+    margin-bottom: 8px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 8px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 8px;
+	float:right;
+}
+
+.clsPage{ 
+font-family:"微软雅黑",sans-serif;text-align:center;font-size:12px;line-height:21px; color:#999; margin-top:35px;
+}
+.clsPage a{
+	display:inline-block;
+	line-height:21px;
+	height:21px;
+    margin-right:4px;
+	text-decoration:none;
+	border:1px #9aafe5 solid;
+	color:white;
+	padding:0px 7px; 
+	background:#fff;
+}
+
+.clsPage a:hover{
+border:1px #2e6ab1 solid;
+color:#363636;
+text-decoration:none
+}
+
+.clsPage span{
+	display:inline-block;
+	height:21px;
+	line-height:21px;
+	padding:0px 7px;
+	margin-right:4px;
+	background-color:#fff; 
+	border:1px #ddd solid;color:#999;
+	color:black;
+}
+
+.clsPage span.cur{background:#296cb3; font-weight:bold; color:#fff; border-color:#296cb3}
+
+
+h6 {
+	font:30px/2em "微软雅黑";
+	color:#3592df;
+	text-align:center;
+}
+.bz {
+	height:30px;
+	padding:0 15px;
+	background-color:#eee;
+	font:12px/30px "微软雅黑";
+	color:#666;
+}
+.zt {
+	float:right;
+	margin-right:15px;
+	width:130px;
+}
+.gb {
+	text-align:center;
+	margin-top:15px;
+}
+hr {
+	height:1px;
+	border:0;
+	background-color:#ccc;
+	width:98%;
+}
+h5 {
+	font:14px/2em "微软雅黑";
+	color:#3592df;
+	margin:20px 0 -15px 0;
+}
