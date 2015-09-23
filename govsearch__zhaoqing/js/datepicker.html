@@ -1,0 +1,372 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>选择日期</title>
+<style type="text/css">
+<!--
+td  { font-family: "宋体"; font-size: 10pt; color: #555555}
+td.canclick  {cursor: hand }
+-->
+</style>
+<script language=JavaScript>
+<!--
+//alert(objGlobalDate.getDate());
+
+//全局变量
+	var	strTodayDate;
+	var	objTodayDate;
+	var	objGlobalDate;
+	var	iGlobalYear;
+	var	iGlobalMonth;
+	var	iGlobalDate;
+	var	iInitialYear;
+	var	iInitialMonth;
+	var	iInitialDate;
+//初始化工作
+	function onInitialize()
+	{
+		window.returnValue	= "";
+
+		objGlobalDate	= parseString2Date(window.dialogArguments);
+
+		iInitialYear	= objGlobalDate.getFullYear();
+		iInitialMonth	= objGlobalDate.getMonth();
+		iInitialDate	= objGlobalDate.getDate();
+
+		iGlobalYear		= iInitialYear;
+		iGlobalMonth	= iInitialMonth;
+		iGlobalDate		= iInitialDate;
+
+		onDrawCalender();
+	}
+//重画日历
+	function onDrawCalender()
+	{
+		objGlobalDate	= new Date(iGlobalYear, iGlobalMonth, 1);
+		objGlobalDate.setDate(0);
+		var	iStartDate	= objGlobalDate.getDate();
+
+		while (objGlobalDate.getDay() > 0)
+		{
+			iStartDate	= iStartDate - 1;
+			objGlobalDate.setDate(iStartDate);
+		}
+
+		var	iLine;
+		var	iColumn;
+		var	iLastMonth	= objGlobalDate.getMonth();
+
+		for (iLine = 0; iLine < 6; iLine++)
+		{
+			var	rowLine	= calbody.rows(iLine);
+
+			for (iColumn = 0; iColumn < 7; iColumn++)
+			{
+				objGlobalDate.setDate(iStartDate);
+
+				iGlobalDate	= objGlobalDate.getDate();
+				if (objGlobalDate.getMonth() != iLastMonth)
+				{
+					iLastMonth	= objGlobalDate.getMonth();
+					iStartDate	= 1;
+				}
+				rowLine.all(iColumn).innerText	= iGlobalDate;
+				iStartDate++;
+				
+				if (((iLastMonth > 0) && (iLastMonth < iGlobalMonth)) || ((iGlobalMonth == 0) && (iLastMonth ==11)))
+				{
+					rowLine.all(iColumn).style.color	= "#888888";
+				}
+				else if (iLastMonth == iGlobalMonth)
+				{
+					rowLine.all(iColumn).style.color	= "#000000";
+				}
+				else
+				{
+					rowLine.all(iColumn).style.color	= "#555555";
+				}
+
+				if (iInitialDate == iGlobalDate && iInitialMonth == iLastMonth && iInitialYear == iGlobalYear)
+				{
+					rowLine.all(iColumn).style.backgroundColor	= "#CBCBFF";
+				}
+				else
+				{
+					rowLine.all(iColumn).style.backgroundColor	= "#FFFFFF";
+				}
+			}
+		}
+
+		onDrawTitle();
+	}
+//重画标题
+	function onDrawTitle()
+	{
+		var	strTitleMonth	= iGlobalMonth + 1;
+		var	objTitleMonth	= document.all("titlmonth");
+
+		if (objTitleMonth != null)
+		{
+			objTitleMonth.innerText	= "" + strTitleMonth;
+		}
+
+		var	objTitleYear	= document.all("titleyear");
+
+		if (objTitleYear != null)
+		{
+			objTitleYear.innerText	= "" + iGlobalYear;
+		}
+	}
+//已经选定日期
+	function onSelectDate()
+	{
+		var	objectSelect	= window.event.srcElement;
+		var	strSelectDate	= ""
+
+		if (objectSelect.style.color == "#888888")
+		{
+			iGlobalMonth	= iGlobalMonth - 1;
+			if (iGlobalMonth < 0)
+			{
+				iGlobalYear	= iGlobalYear - 1;
+				iGlobalMonth	= 11;
+			}
+		}
+		else if (objectSelect.style.color == "#555555")
+		{
+			iGlobalMonth	= iGlobalMonth + 1;
+			if (iGlobalMonth == 12)
+			{
+				iGlobalYear	= iGlobalYear + 1;
+				iGlobalMonth	= 0;
+			}
+		}
+		strSelectDate	= strSelectDate + iGlobalYear + ".";
+		iGlobalMonth	= iGlobalMonth + 1;
+		strSelectDate	= strSelectDate + iGlobalMonth + ".";
+		strSelectDate	= strSelectDate + objectSelect.innerText;
+
+		window.returnValue	= strSelectDate;
+		window.close();
+	}
+//改变月份
+	function onNextMonth()
+	{
+		iGlobalMonth	= iGlobalMonth + 1;
+
+		if (iGlobalMonth == 12)
+		{
+			iGlobalMonth	= 0;
+			iGlobalYear	= iGlobalYear + 1;
+		}
+
+		onDrawCalender();
+	}
+	function onPrevMonth()
+	{
+		iGlobalMonth	= iGlobalMonth - 1;
+
+		if (iGlobalMonth == -1)
+		{
+			iGlobalMonth	= 11;
+			iGlobalYear	= iGlobalYear - 1;
+		}
+
+		onDrawCalender();
+	}
+//改变年份
+	function onNextYear()
+	{
+		iGlobalYear	= iGlobalYear + 1;
+
+		onDrawCalender();
+	}
+	function onPrevYear()
+	{
+		iGlobalYear	= iGlobalYear - 1;
+
+		onDrawCalender();
+	}
+//已经选定今天
+	function onSelectToday()
+	{
+		window.returnValue	= strTodayDate;
+		window.close();
+	}
+//关闭窗口
+	function onCancelSelect()
+	{
+		window.returnValue	= "";
+		window.close();
+	}
+//解析中文习惯（形如：2003-11-7）的日期字串为日期对象
+	function parseString2Date(strTempDate)
+	{
+		var	iYearVal	= 0;
+		var	iMonthVal	= 0;
+		var	iDateVal	= 0;
+
+		if (strTempDate !== "")
+		{
+			var	iIndexYear	= strTempDate.indexOf(".", 0);
+			if (iIndexYear > 0)
+			{
+				iYearVal	= parseInt(strTempDate.substring(0, iIndexYear));
+
+				var	iIndexMonth	= strTempDate.indexOf(".", iIndexYear + 1);
+				if (iIndexMonth > 0)
+				{
+					iMonthVal	= parseInt(strTempDate.substring(iIndexYear + 1, iIndexMonth));
+					iDateVal	= parseInt(strTempDate.substring(iIndexMonth + 1));
+				}
+				else
+				{
+					iMonthVal	= parseInt(strTempDate.substring(iIndexYear + 1));
+				}
+			}
+			else
+			{
+				iYearVal	= parseInt(strTempDate);
+			}
+		}
+
+		var	objTempDate	= new Date();
+
+		if (!isNaN(iYearVal) && iYearVal > 0)
+		{
+			objTempDate.setFullYear(iYearVal);
+		}
+
+		if (!isNaN(iMonthVal) && iMonthVal > 0)
+		{
+			objTempDate.setMonth(iMonthVal - 1);
+		}
+
+		if (!isNaN(iDateVal) && iDateVal > 0)
+		{
+			objTempDate.setDate(iDateVal);
+		}
+
+		return objTempDate;
+	}
+//-->
+</script>
+</head>
+<body onLoad="onInitialize()">
+<table align="center" border="0" cellspacing="3">
+<thead>
+	<tr>
+		<td colspan="7" align="center" height="30" bgcolor="#DDDDDD">
+			<table align="center" border="0" width="100%">
+				<tr>
+					<td align="center" width="20%">
+						<span style="color:#0000FF; cursor:hand; font-family:Webdings; font-size:11pt" onClick="onPrevYear();">7</span>
+						<span style="color:#0000FF; cursor:hand; font-family:Webdings; font-size:11pt" onClick="onPrevMonth();">3</span>
+					</td>
+					<td align="center" width="60%">
+						<span id="titleyear">0</span> 年 <span id="titlmonth">0</span> 月
+					</td>
+					<td align="center" width="20%">
+						<span style="color:#0000FF; cursor:hand; font-family:Webdings; font-size:11pt" onClick="onNextMonth();">4</span>
+						<span style="color:#0000FF; cursor:hand; font-family:Webdings; font-size:11pt" onClick="onNextYear();">8</span>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td align="center" nowrap style="color:#FF0000">星期日</td>
+		<td align="center" nowrap>星期一</td>
+		<td align="center" nowrap>星期二</td>
+		<td align="center" nowrap>星期三</td>
+		<td align="center" nowrap>星期四</td>
+		<td align="center" nowrap>星期五</td>
+		<td align="center" nowrap>星期六</td>
+	</tr>
+	<tr>
+		<td colspan="7" align="center" height="1" bgcolor="#AAAAAA"></td>
+	</tr>
+</thead>
+<tbody id="calbody">
+	<tr>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+	</tr>
+	<tr>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+	</tr>
+	<tr>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+	</tr>
+	<tr>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+	</tr>
+	<tr>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+	</tr>
+	<tr>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+		<td align="center" class="canclick" onclick="onSelectDate()" nowrap></td>
+	</tr>
+</tbody>
+<tfoot>
+	<tr>
+		<td colspan="7" align="center" height="1" bgcolor="#AAAAAA"></td>
+	</tr>
+	<tr>
+		<td align="right" nowrap class="canclick" style="color:#000000" onclick="onSelectToday()">
+			今天:
+		</td>
+		<td colspan="2" nowrap class="canclick" style="color:#000000" onclick="onSelectToday()">
+<script language=JavaScript>
+<!--
+	objTodayDate	= new Date();
+	strTodayDate	= objTodayDate.getYear() + "." + (objTodayDate.getMonth() + 1) + "." + objTodayDate.getDate();
+	document.write(strTodayDate);
+//-->
+</script>
+		</td>
+		<td colspan="3" nowrap>
+		<td colspan="1" nowrap class="canclick" align="right" style="color:#FF0000" onclick="onCancelSelect()">
+			关闭
+		</td>
+	</tr>
+</tfoot>
+</table>
+</body>
+</html>

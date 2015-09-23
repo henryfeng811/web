@@ -1,0 +1,34 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" 
+	version="2.4">
+
+	<context-param>
+			<param-name>ClassInfoFileName</param-name>
+			<param-value>/ClassInfos.xml</param-value>
+	</context-param>
+	<listener>
+			<listener-class>com.trs.startup.StartupListener</listener-class>
+	</listener>
+	 <!--提供统计服务查询的Servlet start-->  
+  <servlet> 
+    <servlet-name>Stat4PowerOpenServlet</servlet-name>  
+    <servlet-class>com.trs.zqsearch.servlet.Stat4PowerOpenServlet</servlet-class> 
+  </servlet>  
+  <servlet-mapping> 
+    <servlet-name>Stat4PowerOpenServlet</servlet-name>  
+    <url-pattern>/staticsPowers.do</url-pattern> 
+  </servlet-mapping>  
+  <!--提供统计服务查询的Servlet end-->
+    <!-- 系统初始化任务配置 -->
+	<servlet>
+		<servlet-name>Init</servlet-name>
+		<servlet-class>com.trs.zqsearch.servlet.InitServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- session超时定义,单位为分钟 -->
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+</web-app>
