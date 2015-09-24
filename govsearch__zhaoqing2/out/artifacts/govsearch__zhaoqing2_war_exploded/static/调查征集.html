@@ -58,7 +58,7 @@
             	<div class="dczj-list">
                 	<p class="hdtit"><a href="#">调查征集</a></p>
                     <div class="dc-tab">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" name="news-list">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="news-list">
                               <tr>
                                 <th width="348">标题</th>
                                 <th width="120">发布单位</th>
@@ -157,24 +157,45 @@
 	}
 
     $(document).ready(function(){
-      $.get("../articleJS/search.jsp", {
-                PageIndex:"0",
-                PageSize:"15",
-                Channel: "",
-                Where: ""},
-              function (result){
-                var arrList = $.parseJSON(result) ;
-                for(var i = 0; i < arrList.length; i++) {
-                  var rowHtml = "<tr><td class='text-left'><span>【调查】</span>""
-                  rowHtml +="			<a href='#'>广东省2014年度依法行政考评社会评议 </a></td>";
-                  rowHtml +="       <td>市法制办 </td>";
-                  rowHtml +="       <td>2015-08-17</td>";
-                  rowHtml +="       <td><img src='images/2015zq_hd_dcpic02.png' ></td>";
-                  rowHtml +="       <td>100</td>";
-                  rowHtml +="	   </tr>";
-                }
-                
-              });
+          var rowHtml = "";
+          $.get("../articleJS/search.jsp", {
+                    PageIndex:"0",
+                    PageSize:"15",
+                    Channel: "",
+                    Where: ""},
+                  function (result){
+                        var arrList = $.parseJSON(result) ;
+                        for(var i = 0; i < arrList.length; i++) {
+                            rowHtml += "<tr>";
+                            if (arrList[i].description == "往期调查"){
+                                rowHtml +="       <td class='text-left'><span>【调查】</span>";
+                            }else{
+                                rowHtml +="       <td class='text-left'><span>【征集】</span>";
+                            }
+                            var re1 = /%22/gi;
+                            var re2 = /%27/gi;
+                            var ti = arrList[i].title.replace(re1, "\"");
+                            ti = ti.replace(re2, "\"");
+                            rowHtml +="			<a href='" +
+                                    arrList[i].Url + "'>" +
+                                    ti + "</a></td>";
+                            rowHtml +="       <td>" + arrList[i].author + "</td>";
+                            rowHtml +="       <td>" +
+                                    arrList[i].relTime + "</td>";
+                            if (arrList[i].type == 1){
+                                rowHtml +="       <td><img src='images/2015zq_hd_dcpic01.png' ></td>";
+
+                            }else{
+                                rowHtml +="       <td><img src='images/2015zq_hd_dcpic02.png' ></td>";
+
+                            }
+                            rowHtml +="       <td>" +
+                                    arrList[i].total + "</td>";
+                            rowHtml +=" </tr>";
+                        }
+                        $("#news-list").append(rowHtml);
+                  }
+          );
     });
 
 	//以下为js加载部分
