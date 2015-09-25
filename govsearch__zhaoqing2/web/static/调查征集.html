@@ -59,24 +59,18 @@
                 	<p class="hdtit"><a href="#">调查征集</a></p>
                     <div class="dc-tab">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0" id="news-list">
-                              <tr>
-                                <th width="348">标题</th>
-                                <th width="120">发布单位</th>
-                                <th width="100">发布时间</th>
-                                <th width="76">状态</th>
-                                <th width="80">参与人数</th>
-                              </tr>
+
                             </table>
                         </div>
                     </div>
             <!--调查征集end-->
 			
-            <div class="page"><a href="#" class="pager" data-cmd="first">首页</a>&nbsp;&nbsp;
-              <a href="#" class="pager" data-cmd="previous">上一页</a>&nbsp;&nbsp;
-              <a href="#" class="pager" data-cmd="next">下一页</a>&nbsp;&nbsp;
-              <a href="#" class="pager" data-cmd="last">尾页</a>&nbsp;&nbsp;共<strong>27</strong>页&nbsp;&nbsp;当前第
-              <a href="#"><strong>1</strong></a>页&nbsp;&nbsp;转到
-              <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
+            <div class="page"><a href="javascript:void(0)" class="pager" id="first">首页</a>&nbsp;&nbsp;
+              <a href="javascript:void(0)" class="pager" id="previous">上一页</a>&nbsp;&nbsp;
+              <a href="javascript:void(0)" class="pager" id="next">下一页</a>&nbsp;&nbsp;
+              <a href="javascript:void(0)" class="pager" id="last">尾页</a>&nbsp;&nbsp;共<strong id="content-pagecount">27</strong>页&nbsp;&nbsp;当前第
+              <a href="javascript:void(0)" id="current"><strong>1</strong></a>页&nbsp;&nbsp;转到
+              <select name="jumpMenu" id="jumpMenu">
                 <option>1</option>
               </select>
           </div>
@@ -156,46 +150,111 @@
 		}]
 	}
 
-    $(document).ready(function(){
-          var rowHtml = "";
-          $.get("../articleJS/search.jsp", {
-                    PageIndex:"0",
-                    PageSize:"15",
-                    Channel: "",
-                    Where: ""},
-                  function (result){
-                        var arrList = $.parseJSON(result) ;
-                        for(var i = 0; i < arrList.length; i++) {
-                            rowHtml += "<tr>";
-                            if (arrList[i].description == "往期调查"){
-                                rowHtml +="       <td class='text-left'><span>【调查】</span>";
-                            }else{
-                                rowHtml +="       <td class='text-left'><span>【征集】</span>";
-                            }
-                            var re1 = /%22/gi;
-                            var re2 = /%27/gi;
-                            var ti = arrList[i].title.replace(re1, "\"");
-                            ti = ti.replace(re2, "\"");
-                            rowHtml +="			<a href='" +
-                                    arrList[i].Url + "'>" +
-                                    ti + "</a></td>";
-                            rowHtml +="       <td>" + arrList[i].author + "</td>";
-                            rowHtml +="       <td>" +
-                                    arrList[i].relTime + "</td>";
-                            if (arrList[i].type == 1){
-                                rowHtml +="       <td><img src='images/2015zq_hd_dcpic01.png' ></td>";
-
-                            }else{
-                                rowHtml +="       <td><img src='images/2015zq_hd_dcpic02.png' ></td>";
-
-                            }
-                            rowHtml +="       <td>" +
-                                    arrList[i].total + "</td>";
-                            rowHtml +=" </tr>";
+    var pageIndex;
+    var pageSize = 10;
+    var pageCount = 0;
+    var selector = 0;
+    function loadpage(pageIndex, pageSize, channel, where){
+        $("#news-list").empty();
+        $("#news-list").append("                                <tr>"+
+                "<th width=\"348\">标题</th>"+
+                "<th width=\"120\">发布单位</th>"+
+                "<th width=\"100\">发布时间</th>"+
+                "<th width=\"76\">状态</th>"+
+                "<th width=\"80\">参与人数</th>"+
+                "</tr>");
+        var rowHtml = "";
+        $.get("../articleJS/search.jsp", {
+                    PageIndex:pageIndex,
+                    PageSize:pageSize,
+                    Channel: channel,
+                    Where: where},
+                function (result){
+                    var obj = $.parseJSON(result) ;
+                    pageCount = obj.PageCount;
+                    var arrList = obj.results
+                    for(var i = 0; i < arrList.length; i++) {
+                        rowHtml += "<tr>";
+                        if (arrList[i].description == "往期调查"){
+                            rowHtml +="       <td class='text-left'><span>【调查】</span>";
+                        }else{
+                            rowHtml +="       <td class='text-left'><span>【征集】</span>";
                         }
-                        $("#news-list").append(rowHtml);
-                  }
-          );
+                        var re1 = /%22/gi;
+                        var re2 = /%27/gi;
+                        var ti = arrList[i].title.replace(re1, "\"");
+                        ti = ti.replace(re2, "\"");
+                        rowHtml +="			<a href='" +
+                                arrList[i].Url + "'>" +
+                                ti + "</a></td>";
+                        rowHtml +="       <td>" + arrList[i].author + "</td>";
+                        rowHtml +="       <td>" +
+                                arrList[i].relTime + "</td>";
+                        if (arrList[i].type == 1){
+                            rowHtml +="       <td><img src='images/2015zq_hd_dcpic01.png' ></td>";
+
+                        }else{
+                            rowHtml +="       <td><img src='images/2015zq_hd_dcpic02.png' ></td>";
+
+                        }
+                        rowHtml +="       <td>" +
+                                arrList[i].total + "</td>";
+                        rowHtml +=" </tr>";
+                    }
+                    $("#news-list").append(rowHtml);
+                    var cur = pageIndex + 1;
+                    $("#current").html("<strong>" + cur +"</strong>");
+                    $("#content-pagecount").html(pageCount);
+
+                    $("#jumpMenu").empty();
+                    for (var i = 1; i<= pageCount; i++){
+                        $("#jumpMenu").append("<option text=\""+i+"\">" + i + "</option>");
+                    }
+
+                    var sel = $("#jumpMenu").get(0);
+                    sel.options[pageIndex].selected = true;
+                }
+        );
+    }
+
+    $(document).ready(function(){
+        pageIndex = 0;
+        $("#news-list").empty();
+        $("#news-list").append("                                <tr>"+
+                "<th width=\"348\">标题</th>"+
+                "<th width=\"120\">发布单位</th>"+
+                "<th width=\"100\">发布时间</th>"+
+                "<th width=\"76\">状态</th>"+
+                "<th width=\"80\">参与人数</th>"+
+                "</tr>");
+        loadpage(0, pageSize, "", "")
+        $("#first").click(function (){
+            pageIndex = 0;
+            loadpage(0, pageSize, "", "");
+        });
+
+        $("#next").click(function (){
+            if (pageIndex >= pageCount -1)
+                return;
+            pageIndex++;
+            loadpage(pageIndex, pageSize, "", "");
+        });
+
+        $("#previous").click(function (){
+            if (pageIndex < 1)
+                return;
+            pageIndex--;
+            loadpage(pageIndex, pageSize, "", "");
+        });
+
+        $("#last").click(function(){
+            pageIndex = pageCount - 1;
+            loadpage(pageIndex, pageSize, "", "");
+        });
+
+        $("#jumpMenu").change(function (){
+            loadpage($(this).find("option:selected").text() - 1, pageSize, "", "");
+        });
     });
 
 	//以下为js加载部分
