@@ -8,7 +8,7 @@
 	String userPass		= "manager";
 	String database		= "zqgov2015_survey";
 	
-	public static final String SQL="DOCID2;DOCPUBURL;DOCCHANNEL;DocTitle;DocAuthor;DocRelTime;DocStatus;Total;Type;";
+	public static final String SQL="DOCID2;DOCPUBURL;DOCCHANNEL;DocTitle;ChnlDesc;DocAuthor;DocRelTime;DocStatus;Total;Type;";
 	
 	public String getNullStringAndEncoding(String sIn)
 	{

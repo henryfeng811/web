@@ -1,6 +1,8 @@
 <%@ page import="com.eprobiti.trs.TRSConnection" %>
 <%@ page import="com.eprobiti.trs.TRSResultSet" %>
 <%@ page import="com.trs.client.TRSConstant" %>
+<%@ page import="java.text.MessageFormat" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <%@ include file="include/head.jsp"%>
 <%@ include file="include/public_deal.jsp"%>
 <%--
@@ -36,7 +38,10 @@
     trsConn = new TRSConnection();
     trsConn.connect(serverName, serverPort, userName, userPass);
     trsRs = new TRSResultSet(trsConn);
-    trsRs.executeSelect(database, "", false);
+//    trsRs.executeSelect(database, "", false);
+      trsRs.executeSelect(database, sWhere, sOrderBy, "", "", 0,
+              TRSConstant.TCE_OFFSET | TRSConstant.TCM_LIFOSPARE,
+              false);
     trsRs.setReadOptions(TRSConstant.TCE_OFFSET, SQL, "");
     trsRs.setBufferSize(14, 5);
     trsRs.moveFirst();
@@ -44,22 +49,33 @@
     do {
       sRetJson.append("{");
       //DocId2
-      sRetJson.append("\"DocId2\":\"").append(trsRs.getString("DocId2")).append("\",");
+      sRetJson.append("\"id2\":\"").append(trsRs.getString("DocId2")).append("\",");
       //DocTitle
       String content = trsRs.getString("DOCTITLE");
       content = content.replaceAll("\"", "%22");
-      content = content.replaceAll("\"", "%27");
-      sRetJson.append("\"DocTitle\":\"").append(content).append("\"");
+      content = content.replaceAll("'", "%27");
+      sRetJson.append("\"title\":\"").append(content).append("\",");
+      //ChnlDesc
+      content = trsRs.getString("ChnlDesc");
+      content = content.replaceAll("\"", "%22");
+      content = content.replaceAll("'", "%27");
+      sRetJson.append("\"description\":\"").append(content).append("\",");
       //DocAuthor
-      sRetJson.append("\"DocRelTime\":\"").append(trsRs.getDate("DocRelTime").getTRSFormat()).append("\",");
+      sRetJson.append("\"author\":\"").append(trsRs.getString("DocAuthor")).append("\",");
+      //DocRelTime
+      com.eprobiti.trs.Date relTime = trsRs.getDate("DocRelTime");
+      sRetJson.append("\"relTime\":\"").append(relTime.getYear()).append("-").append(relTime.getMonth()).append("-").append(relTime.getDate()).append("\",");
       //DocStatus
-      sRetJson.append("\"DocStatus\":\"").append(trsRs.getString("DocStatus")).append("\",");
+      sRetJson.append("\"status\":\"").append(trsRs.getString("DocStatus")).append("\",");
       //Total
-      sRetJson.append("\"Total\":\"").append(trsRs.getString("Total")).append("\",");
+      sRetJson.append("\"total\":\"").append(trsRs.getString("Total")).append("\",");
       //Type
-      sRetJson.append("\"Type\":\"").append(trsRs.getString("Type")).append("\",");
+      sRetJson.append("\"type\":\"").append(trsRs.getString("Type")).append("\",");
       //DOCPUBURL
-      sRetJson.append("\"DocPubUrl\":\"").append(trsRs.getString("DOCPUBURL")).append("\"");
+      content = trsRs.getString("DOCPUBURL");
+      content = content.replaceAll("\"", "%22");
+      content = content.replaceAll("'", "%27");
+      sRetJson.append("\"Url\":\"").append(content).append("\"");
       sRetJson.append("},");
     } while (trsRs.moveNext());
     String str = sRetJson.substring(0, sRetJson.length() - 1) + "]";
